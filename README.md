@@ -1,2 +1,2 @@
-# javapractice
-자바공부
+standard of Java
+자바의정석
