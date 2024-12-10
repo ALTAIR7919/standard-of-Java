@@ -1,0 +1,32 @@
+# 자바의 정석 1일차
+## 1장
+일반적으로 내가 썼던 c, c#은 일반 애플리케이션 -> os -> 하드웨어 이지만 
+Java는 Java 애플리케이션 -> JVM -> os -> 하드웨어로 간다 
+내가 이해한 JVM 
+원래는 내가 실행시키고 싶은 애플리케이션은 os 따라 다 달라서 다 변경해 주어야 하는데 
+이 친구는 JVM이라는 걸 사용함으로써 내가 굳이 변경하지 않아도 사용이 가능하다는 듯하다 
+그래서 옛날에는 속도가 느렸는데 지금은 최적화가 많이 되어서 격차가 많이 줄었다고 한다
+JVM은 heap, static stack이 있는데 
+method는 메모리로 저장되는 친구들이 들어가고 
+static에는 객체가 heap에 주소가 들어간다 그래서 객체내에서 쓰던 주소들이 
+사용 후에 heap에서 자동으로 제거 되어 사라진다고 하는거 같다 <-메모리 최적화가 좋은거 같다 c는 free()로 해제 해줬어야 했는데 
+https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EA%B7%B8%EB%A6%BC%EC%9C%BC%EB%A1%9C-%EB%B3%B4%EB%8A%94-%EC%9E%90%EB%B0%94-%EC%BD%94%EB%93%9C%EC%9D%98-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%81%EC%97%AD%EC%8A%A4%ED%83%9D-%ED%9E%99 의 그림 참고
+
+## 2장
+변수의 이름 명명 
+1. 대 소문자에 구분이 있고 길이 제한 x
+2. 예약어 사용 x <- 모든 언어 만통인 듯
+3. 숫자 시작 x <- 애도 ㅇㅇ
+4. 특수문자 '_'랑 '$'만 사용 가능 <- '$' 이 기호가 되네
+
+리터널 타입의 접미사 
+float : f
+double : d 
+float pi = 3.14; <- errer float 타입에는 double 타입 저장불가 float pi = 3.14f; f 붙혀야함
+이떄 'long l = 123;' 과 같이 저장범위가 넓은 타입에 좁은 타입의 값을 저장하는건 가능하다
+그래서 그냥 double 쓰는게 맘 편하다
+
+String 과 new
+String name = "java"; 이 문자열은 가능은 하다 하지만 String name = new String("java"); 이가 정확하다고 한다.
+앞에꺼는 String Pool에 들어가서 똑같은 java로 보고 뒤에 것은 똑같은 java지만 java1 java2같이 뒤에 숨겨진 숫자가 있는듯 다르게 보봐서 그렇다고 한다.
+https://ict-nroo.tistory.com/18 참고
