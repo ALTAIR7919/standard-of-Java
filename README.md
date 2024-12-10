@@ -1,2 +1,2 @@
-# standard of Java
+# Standard Of Java
 자바의정석
